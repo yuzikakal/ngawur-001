@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1 {
+            color: rgb(185, 213, 228);
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+        p {
+            color: rgb(212, 237, 237);
+        }
+        body {
+            background-color: rgb(50, 52, 65);
+            padding: 8.7%;
+            background-repeat:no-repeat;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            font-family: Verdana, Tahoma, sans-serif;
+        }
+    </style>
+    <script>
+        alert("Halo dan Selamat Datang. Sebelum memulai, marilah berdoa menurut kepercayaan masing masing")
+        alert("password = well")
+    
+        let nama = prompt("Nama Peserta (wajib)")
+        console.log(nama)
+        var a = nama
+        if (a = nama) {
+            document.write("<h1>Halo " + nama + "</h1> <p>Selamat Datang Di Quiz Kepintaran</p><p>semoga beruntung "+ nama +" sang jenius!!</p>")
+        }
+        else  {
+            document.write("<h1>Halo Pecundang </h1> <p>Selamat Datang Di Quiz Kepintaran</p><p>kami senang anda gagal</p>")
+        }
+
+        function entwr() {
+            var confirm = "well"
+            var password = document.getElementById("verify").value 
+            if (password === confirm) {
+                window.open('level.html', '_self')
+            } 
+        }
+    </script>
+    <title>Selamat Datang</title>
+</head>
+<body>
+    <hr width="100%">
+    <p>Masukkan <em>password</em> permainan :</p>
+    <input type="password" size="17px" id="verify"><br><button id="klik" onclick="entwr()">Enter</button>
+    <!--<button id="enterr" onclick="javascript:window.open('jawaban.html', '_self')">Enter</button>-->
+    <script>
+    var l = document.getElementById("verify")
+    l.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault()
+            document.getElementById("klik").click()
+        }
+    })
+</script>
+</body> 
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="jawaban.css"> -->
+    <style>
+        body {
+            /* background-image: linear-gradient(to bottom right, blue, white); */
+            background-color: blue;
+            display: flex;
+            width: 100%;
+            background-size: cover;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script>
+        /*alert("Jawab dengan benar")
+    
+        let nama = prompt("Nama Peserta :")
+        console.log(nama)
+        var a = nama
+        if (a = nama) {
+            document.write("<h1>Halo " + nama + "</h1> <p>Silahkan Jawab ini dengan benar</p>")
+        }*/
+
+        function vaue() {
+        /*let x = document.getElementById("a").value 
+        console.log(x)
+        let y = document.getElementById("b").value 
+        console.log(y)
+        }*/
+        let x = document.getElementById("a").value
+        let y = eval(x)
+        console.log(y)
+        let z = document.getElementById("b").value
+        console.log(z)
+
+        if (z == y) {
+            window.open('benar.html', '_self')
+        }
+        else {
+            window.open('salah.html', '_self')
+            /*document.getElementById("c").value = "Goblok"*/
+        }
+    }
+        /*document.getElementById('hasil').addEventListener('click', function() {
+            let x = document.getElementById('a').value 
+            let y = document.getElementById('b').value 
+            let z = Number(x) + Number(y)
+            console.log("Hasil = " + z)
+        })*/
+
+    </script>
+    <title>jawab dengan benar</title>
+</head>
+<body>
+    <table>
+    <tr>
+        <td><input type="text" id="a"></td><td>=</td><td><input type="text" id="b"></td><td> <button type="button" id="hasil" onclick="vaue()">submit</button>
+        <!--</td><td><input type="text" id="c"></td>-->
+    </tr>
+    </table>
+</body>
+</html>
